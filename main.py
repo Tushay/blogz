@@ -26,7 +26,7 @@ def blog():
         if not id:
             return render_template('blog.html', blogs=blogs)
         else:
-            b = int(request.args.get('b'))
+            b = str(request.args.get('b'))
             blog = Blog.query.get(b)
             return render_template('singlepost.html', blog=blog)
 
