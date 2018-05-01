@@ -35,6 +35,7 @@ class User(db.Model):
         self.password = password
 
 
+
 @app.before_request
 def require_login():
     allowed_routes = ['login', 'register', 'blogreader', 'index']
